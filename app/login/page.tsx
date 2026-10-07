@@ -24,7 +24,7 @@ export default function LoginPage() {
     });
 
     if (error) {
-      setErrore("Email o password non corretti.");
+      setErrore(error.message);
       setCaricamento(false);
       return;
     }
