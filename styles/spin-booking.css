@@ -1,0 +1,681 @@
+.spin-booking-calendar{
+    width:100%;
+    max-width:700px;
+    margin:0px auto;
+    padding:30px;
+    box-sizing:border-box;
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    font-family:Arial,sans-serif;
+}
+
+
+/* SCHERMATE */
+
+.spin-screen{
+    display:block;
+}
+
+
+/* HEADER CALENDARIO */
+
+.spin-calendar-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+
+.spin-calendar-header h3{
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    color:#111;
+}
+
+
+/* FRECCE */
+
+.spin-nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:40px;
+    height:40px;
+
+    background:#c8b07d;
+    color:#fff;
+
+    border:none;
+    border-radius:8px;
+
+    font-size:22px;
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+
+/* GIORNI SETTIMANA */
+
+.spin-weekdays{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:4px;
+
+    margin-bottom:8px;
+}
+
+
+.spin-weekdays span{
+    text-align:center;
+
+    font-size:10px;
+    font-weight:700;
+
+    color:#999;
+}
+
+
+/* CALENDARIO */
+
+.spin-days{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:4px;
+}
+
+
+.spin-empty-day{
+    height:38px;
+}
+
+
+/* GIORNI */
+
+.day{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    height:38px;
+
+    background:#fff;
+
+    border:1px solid #e5e5e5;
+    border-radius:8px;
+
+    color:#111;
+
+    font-size:12px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.day:hover:not(:disabled){
+
+    background:rgba(200,176,125,.15);
+
+    border-color:#c8b07d;
+
+}
+
+
+
+.day.active{
+
+    background:#c8b07d;
+
+    border-color:#c8b07d;
+
+    color:#fff;
+
+}
+
+
+
+/* GIORNI CHIUSI */
+
+.day.disabled{
+
+    background:#faf4f4;
+
+    border:1px solid #ead8d8;
+
+    color:#b45d5d !important;
+
+    cursor:not-allowed;
+
+}
+
+
+.day.disabled:hover{
+
+    background:#faf4f4;
+
+    border-color:#ead8d8;
+
+}
+
+
+
+/* TITOLI */
+
+.spin-section-title{
+
+    margin:25px 0 15px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111;
+
+}
+
+
+
+/* PERSONE */
+
+.spin-guests{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:8px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.spin-guest-btn{
+
+    height:38px;
+
+    background:#fff;
+
+    border:1px solid #e5e5e5;
+
+    border-radius:8px;
+
+    color:#111;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+.spin-guest-btn.active{
+
+    background:#c8b07d;
+
+    border-color:#c8b07d;
+
+    color:#fff;
+
+}
+
+
+
+/* ORARI */
+
+.spin-times{
+    display:block;
+    width:100%;
+    margin-bottom:25px;
+}
+
+
+
+.spin-time-btn{
+    height:38px;
+    background:#fff;
+    border:1px solid #e5e5e5;
+    border-radius:8px;
+    color:#111;
+    font-size:12px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+
+
+.spin-time-btn.active{
+
+    background:#c8b07d;
+
+    border-color:#c8b07d;
+
+    color:#fff;
+
+}
+
+
+
+/* CONTINUA */
+
+#next-step{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:#c8b07d;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+#next-step:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+
+
+
+/* MOBILE */
+
+@media screen and (max-width:768px){
+
+    .spin-booking-calendar{
+    width:100%;
+    margin:0;
+    padding:16px;
+    border-radius:0;
+}
+
+
+    .spin-times{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .spin-calendar-header h3{
+
+        font-size:16px;
+
+    }
+
+}
+/* =========================
+   FORM CLIENTE STEP 3
+========================= */
+
+
+.spin-row{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.spin-col{
+
+    flex:1;
+
+}
+
+
+
+.spin-booking-calendar input,
+.spin-booking-calendar textarea{
+
+
+    width:100%;
+
+
+    padding:14px 16px;
+
+
+    background:#fff;
+
+
+    border:1px solid #e5e5e5;
+
+
+    border-radius:10px;
+
+
+    box-sizing:border-box;
+
+
+    font-size:14px;
+
+
+    color:#111;
+
+
+    font-family:Arial,sans-serif;
+
+
+    outline:none;
+
+
+    transition:.2s;
+
+
+}
+
+
+
+.spin-booking-calendar input:focus,
+.spin-booking-calendar textarea:focus{
+
+
+    border-color:#c8b07d;
+
+
+    box-shadow:0 0 0 3px rgba(200,176,125,.15);
+
+
+}
+
+
+
+.spin-booking-calendar input::placeholder,
+.spin-booking-calendar textarea::placeholder{
+
+    color:#999;
+
+}
+
+
+
+.spin-booking-calendar textarea{
+
+
+    min-height:120px;
+
+
+    resize:none;
+
+
+}
+
+
+/* BOTTONE PRENOTA */
+
+
+#spin-prenota{
+
+
+    width:100%;
+
+
+    margin-top:20px;
+
+
+    padding:15px;
+
+
+    background:#c8b07d;
+
+
+    color:#fff;
+
+
+    border:none;
+
+
+    border-radius:10px;
+
+
+    font-size:15px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:.2s;
+
+
+}
+
+
+
+#spin-prenota:hover{
+
+
+    opacity:.9;
+
+
+}
+
+
+/* MOBILE FORM */
+
+
+@media screen and (max-width:768px){
+
+
+    .spin-row{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+
+}
+/* =========================
+   CONFERMA RICHIESTA
+========================= */
+
+
+.spin-confirmation{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+
+
+.spin-check{
+
+    width:65px;
+
+    height:65px;
+
+    margin:0 auto 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#c8b07d;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+
+
+.spin-confirmation h2{
+
+    margin:0 0 15px;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#111;
+
+}
+
+
+
+.spin-confirmation > p{
+
+    font-size:16px;
+
+    color:#555;
+
+}
+
+
+
+.spin-summary{
+
+    max-width:320px;
+
+    margin:25px auto;
+
+    padding:20px;
+
+    background:#fafafa;
+
+    border:1px solid #eee;
+
+    border-radius:12px;
+
+}
+
+
+
+.spin-summary p{
+
+    margin:10px 0;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#111;
+
+}
+
+
+
+.spin-message{
+
+    margin-top:25px;
+
+    font-size:14px !important;
+
+    color:#777 !important;
+
+}
+/* =========================
+   DATI OSTERIA SPIN
+========================= */
+
+.spin-restaurant-info{
+
+    margin-top:30px;
+
+    padding-top:25px;
+
+    border-top:1px solid #e5e5e5;
+
+    text-align:center;
+
+}
+
+
+.spin-restaurant-name{
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+
+.spin-restaurant-info p{
+
+    margin:4px 0;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    color:#666;
+
+}
+.spin-service-group{
+  width:100%;
+  margin-bottom:24px;
+}
+
+.spin-service-title{
+  margin-bottom:10px;
+  font-size:16px;
+  font-weight:600;
+  color:#222;
+}
+
+.spin-service-times{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:10px;
+  width:100%;
+}
+
+@media (max-width:600px){
+  .spin-service-times{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
